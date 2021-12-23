@@ -18,3 +18,10 @@ DELETE FROM pessoas WHERE id=2;     --SUPPRIMER AVEC PRECISION
 
 SELECT * FROM pessoas ORDER BY nome  --ORDENAÇÃO CRESCENTE
 SELECT * FROM pessoas ORDER BY nome DESC --ORDENAÇÃO DESCRESECNTE
+
+SELECT COUNT(), GENERO FROM pessoas GROUP BY genero
+
+ALTER TABLE 'pessoa' ADD 'gnero' VARCHAR(1) NOT NULL AFTER 'nacsimento';
+
+SELECT COUNT(genero), genero FROM `pessoa` GROUP BY genero;    -- Agrupa os item com mesmo determinado algo
+SELECT COUNT(id), genero FROM `pessoa` GROUP BY genero;         --Faz a mesma coisa que de cima, e é preferivel
